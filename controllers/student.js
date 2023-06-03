@@ -70,7 +70,6 @@ catch(error){
     response.status(401).json({message:error.message})
 }
 }
-
 async function getStudent(request,response,next){
     let student 
     try{
@@ -86,9 +85,11 @@ return response.status(404).json({Message:`cannot find user id ${request.param.i
     next()
 
 }
+
 module.exports = {getStudentDetails,
     addingStudentDetails,
     updateStudentDetails,
     deleteStudent,
     displayStudentByValue,
-    getStudent}
+    getStudent
+  }
